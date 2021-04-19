@@ -7,7 +7,7 @@ def calculateAverage(listOfDatapoints):
 
 phlevels = [7.1, 7.5, 7.3, 6.9, 7.2, 7.4, 7.2, 7.4, 6.9, 6.8, 5.0, 5.1, 5.9]
 length = len(phlevels)
-avgOld = calculateAverage(phlevels[:length-3])
+avgOld = calculateAverage(phlevels[:length-3]) # The indexed "split" versions of the original list as parameters
 avgLatest = calculateAverage(phlevels[length-3:])
 devAbs = abs(avgLatest - avgOld)
 devPercent = devAbs / avgOld

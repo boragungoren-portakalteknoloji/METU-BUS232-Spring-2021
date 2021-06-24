@@ -9,7 +9,9 @@ try:
     #               ^ If the file does not exist, then connect() will create the file
     
     select_all_persons ="SELECT * from PERSON_TABLE"
+    #                      ^ to be able to write this (or another) query, we need a catalogue of tables / documentation is necessary.
     df_persons = pd.read_sql_query(select_all_persons, conn, index_col="rowid")
+    #                                                           ^ optional
     print(df_persons)
     
 except Error as error:
